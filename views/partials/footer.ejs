@@ -1,0 +1,53 @@
+</main>
+
+<footer>
+  <!-- Step 4 - Add a dynamic year to the footer using JS. -->
+  <center><p class="footer">Gagan Copyright © <%= new Date().getFullYear() %></p></center>
+ 
+
+</div>
+
+<script>
+      $(".task-checkbox").on("change", function() {
+    if (this.checked) {
+      $(this).siblings("span").addClass("task-completed");   //sibiling because it is the content written is child of the checkbox input.
+    } else {
+      $(this).siblings("span").removeClass("task-completed");
+    }
+  });
+
+  // -------neon-mode toggle--------
+
+  const neonToggle = document.getElementById('neon-toggle');
+const body = document.body;
+
+neonToggle.addEventListener('change', function() {
+  if (this.checked) {
+    body.classList.add('neon-mode'); //here we use classlist to access the 
+  } else {
+    body.classList.remove('neon-mode');
+  }
+});
+
+   $(".fa-solid").hover(
+      function() {
+        $(this).addClass("fa-beat-fade");
+      },
+      function() {
+        $(this).removeClass("fa-beat-fade");
+      }
+    );
+
+    $(document).ready(function () {
+  $("#sidebarToggle").click(function () {
+    $(".navbar-nav").toggleClass("active");
+    $(".sidebar").toggleClass("active");
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

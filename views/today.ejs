@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+
+<button class="todayDate"><%= dayOfWeek + " " + dayOfMonth + ", " + monthName %></button>>
+
+
+
+<div class="box">
+  <form action="/submit_today" method="post" class="items">
+    <input type="text" placeholder="New Items" id="items" name="itemListed">
+    <input type="submit" value="+" id="btn" name="button"> 
+  </form>
+</div>
+        
+<ul class="tasks">
+  <% for (let i = 0; i < array.length; i++) { %>
+    <li>
+      <input type="checkbox" id="checkBox<%= i %>" class="task-checkbox">
+      <span><%= array[i] %></span>
+    </li>
+  <% } %>
+</ul>
+
+<%- include("partials/footer.ejs") %> 

@@ -1,0 +1,554 @@
+:root {
+  --primary-color: #ffa7e2;
+  --secondary-color: #ff75d1;
+  --background-gradient-start: #ffd8d8;
+  --background-gradient-end: #ffa7e2;
+  --text-color: #000;
+  --text-color2: #fff;
+  --text-color-alt: #888;
+  --text-color-alt2: #888;
+  --hover-shadow-color: #fff;
+  --border-color: #ff75d1;
+  --head-color: #ffb1df9c;
+}
+
+/* Neon mode styles */
+.neon-mode {
+  --primary-color: #000;
+  --secondary-color: #00ffff;
+  --background-gradient-start: #fff;
+  --background-gradient-end: #00ffff;
+  --text-color: #fff;
+  --text-color2: #000;
+  --text-color-alt: #00ffff;
+  --text-color-alt2: #0086867e;
+  --hover-shadow-color: #00ffff;
+  --border-color: #00ffff;
+  --switch-bg: #00ffff;
+  --switch-slider-bg: #00ffff;
+  --head-color: #000;
+}
+
+/* Rest of your existing CSS */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(160deg, var(--background-gradient-start) 60%, var(--background-gradient-end), var(--secondary-color), var(--secondary-color) 60%);
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.brand {
+  color: var(--primary-color);
+  animation-name: slideInFromLeft;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.5s;
+}
+
+.brand a{
+  color: var(--text-color);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    color: pink;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    color: blue;
+  }
+}
+
+.custom-navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 50px;
+  margin: 5px 5px;
+  color: var(--text-color) !important;
+  font-size: 20px;
+}
+
+.nav-link i {
+  padding: 0 5px;
+  
+}
+
+.navbar-nav li:hover {
+  text-shadow: 0 0 10px var(--hover-shadow-color),
+  0 0 20px var(--hover-shadow-color),
+  0 0 40px var(--hover-shadow-color),
+  0 0 80px var(--hover-shadow-color),
+  0 0 120px var(--hover-shadow-color),
+  0 0 160px var(--hover-shadow-color);
+}
+
+.nav-link {
+  position: relative;
+  color: var(--border-color);
+}
+
+.navbar-nav li:nth-child(3){
+  margin-right: 20px;
+}
+
+.nav-link::before {
+  content: "";
+  width: 105%;
+  height: 105%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 3px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
+  transition: all 0.3s linear;
+  transform-origin: left;
+}
+
+.nav-link::after {
+  content: "";
+  width: 105%;
+  height: 105%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
+  transition: all 0.3s linear;
+  transform-origin: left;
+}
+
+
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  width: 10%;
+  height: 20%;
+  transform: rotate(360deg);
+}
+
+
+.col-2 h1 {
+  font-size: 25px;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+  height: 70px;
+  text-align: center;
+}
+
+#items {
+  flex: 1;
+  font-size: 25px;
+  background-color: var(--text-color2);
+  color: var(--text-color);
+  height: 80px;
+  margin: 0;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+}
+
+#btn {
+  background-color: rgb(141, 92, 255);
+  color: var(--text-color);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 33px;
+}
+
+.tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  padding: 25px 0; 
+  width: 387px;
+  height: 80px;
+  font-size: 25px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 1px solid var(--text-color2);
+}
+
+.tasks li:nth-child(1) {
+  border: none;
+}
+
+.tasks .task-checkbox {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.tasks span {
+  flex: 1;
+  text-align: left;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: var(--text-color-alt2);
+}
+
+.todayDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  margin-top: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--head-color);
+  color: var(--border-color);
+  font-size: 35px;
+  font-weight: 800;
+  width: 387px;
+}
+
+.work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 387px;
+  margin: 20px auto;
+  margin-top: 60px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--head-color);
+  color: var(--border-color);
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.home h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.leading {
+  width: 800px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px; 
+}
+
+
+#instruct-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: filter 250ms;
+}
+
+#instruct-btn a{
+  text-decoration: none;
+}
+
+.shadow,
+.edge {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+}
+
+.shadow {
+  background: hsla(0, 0%, 0%, 0.25);
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+  background: linear-gradient(to left,
+    hsl(332, 96%, 38%) 0%, 
+    hsl(340, 98%, 40%) 8%, 
+    hsl(340, 100%, 42%) 92%, 
+    hsl(340, 97%, 43%) 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font: 1.1rem Poppins, sans-serif;
+  color: white;
+  background: var(--secondary-color);
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+#instruct-btn:hover {
+  filter: brightness(110%);
+}
+
+#instruct-btn:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#instruct-btn:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+#instruct-btn:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#instruct-btn:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+#instruct-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ------------Neon-Mode-------------- */
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 5px;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,var(--secondary-color),var(--primary-color) 70%);
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #ffcec7, inset -10px -4px 0 0 #ff6ec7;
+}
+
+
+
+.footer {
+  margin-top: 200px;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px; /* Initially hiding the sidebar */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0; /*sidebar position :)*/
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ----------Resposiveness----------- */
+
+
+@media (max-width: 990px){
+  .todayDate,.work{
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  }
+
+  #items{
+    
+    font-size: 20px;
+    height: 50px;
+  }
+  #btn{
+    padding: 7px 17px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .box{
+    margin-left: 12px;
+  }
+  
+  .tasks li{
+    padding: 15px 0; 
+    width: 300px;
+    height: 50px;
+    font-size: 15px;
+    margin-left: -28px;
+    }
+
+    .tasks .task-checkbox{
+      width: 20px;
+      height: 20px;
+    }
+
+    .home h1{
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 600;
+    }
+
+    .leading {
+      width: 350px;
+      text-align: justify;
+      font-size: 18px;
+      margin: 0 30px;
+      margin-bottom: 30px;
+  }
+
+  .front {
+    padding: 12px 25px;
+    border-radius: 12px;
+    font: 0.9rem Poppins, sans-serif;
+    border: 0.5px solid #ff16b1;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 6px 20px;
+      margin: 3px 7px;
+      font-size: 16px;
+    }
+
+    .footer{
+      margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 990px) {
+  .navbar-nav {
+    display: flex !important;
+  }
+
+  .navbar-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-top: 2px solid var(--border-color);
+  }
+
+  .navbar-nav.active .nav-link {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+
+  .sidebar.active {
+    left: 0; /* Show the sidebar on smaller screens */
+  }
+
+  .center-nav{
+    display: none;
+  }
+}

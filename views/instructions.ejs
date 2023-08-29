@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Instructions</title>
+  <style>
+    :root {
+      --primary-color: #ffa7e2;
+      --secondary-color: #ff75d1;
+      --background-gradient-start: #ffd8d8;
+      --background-gradient-end: #ffa7e2;
+      --text-color: #fff;
+      --text-color-alt: #888;
+      --hover-shadow-color: #fff;
+      --border-color: #ff75d1;
+      --dark-color: #ff1db4;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      width: 100%;
+      background: var(--background-gradient-start);
+    }
+
+   .container h1 {
+    color: #af0075;
+      text-align: center;
+      font-size: 50px;
+      font-weight: bolder;
+      margin-top: 20px;
+      
+    }
+
+    .instruct-link{
+        font-size: 30px;
+        margin: 50px 0;
+        text-decoration: none;
+        color: var(--dark-color);
+    }
+
+    .instruct-sub-head{
+        font-size: 35px;
+    }
+    
+
+    .instructions{
+        width: 100%;
+    }
+
+    .instruct-head{
+        font-size: 38px;
+        color: #fd24b5;
+        margin-bottom: 20px;
+    }
+    .instruct-sub-head{
+        color: #ff52c5;
+        margin-bottom: 20px;
+    }
+    
+    .lead{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    .col-md-7{
+        padding: 20px;
+    }
+
+    .col-md-7 ul li{
+        padding: 5px 0;
+    }
+
+    .col-md-5 {
+  overflow: hidden;
+  
+}
+
+.instruct-img {
+  height: 100%;
+  width: 100%;
+      transition: all 0.8s ease-in-out;
+}
+
+.col-md-5:hover .instruct-img {
+      transform: scale(1.2)
+}
+
+
+     @media (max-width: 890px){
+        .container h1{
+            font-size: 28px;
+        }
+        .instruct-link{
+            font-size: 18px;
+            
+        }
+        .instruct-head{
+            font-size: 22px;
+        } 
+        .instruct-sub-head{
+            font-size: 18px;
+        }
+        .lead{
+            font-size: 16px;
+        }
+
+        
+    }
+  </style>
+</head>
+<body>
+    
+        
+    <div class="container instructions">
+        <h1>INSTRUCTIONS</h1>
+             <h3><a class="instruct-link" href="/">← Home</a></h3>
+        <br>
+        <hr>
+    
+        <div class="row ">
+            <div class="col-md-7">
+                <h2 class="instruct-head">First - <span class="instruct-sub-head">Go to Today</span></h2>
+                <ul>
+                    <li> <p class="lead">Click on the add button to add items in your list.</p></li>
+                    <li> <p class="lead">Now write your task which you want to complete today.</p></li>
+                    <li> <p class="lead">Once it is created then click enter or click on add item to add it into the queue.</p></li>
+                    <li> <p class="lead">You can add many items as you want in your list.</p></li>
+                    <li> <p class="lead">Once your list completed you can use it to maintain your routine work.</p></li>
+                </ul>
+            </div>
+          <div class="col-md-5">
+           <img class="image bd-placeholder-img bd-placeholder-img-lg instruct-img img-fluid mx-auto" src="images/todo.jpg" alt="image">
+        </div>
+        
+        </div>
+    
+        <hr>
+    
+        <div class="row ">
+            <div class="col-md-7 order-md-2">
+                <h2 class="instruct-head">Second - <span class="instruct-sub-head">Go to Work</span></h2>
+                <ul>
+                    <li> <p class="lead">Click on the add button to add items in your list.</p></li>
+                    <li> <p class="lead">Now write your task or work which you want to complete.</p></li>
+                    <li> <p class="lead">Once it is created then click enter or click on add item to add it into the queue.</p></li>
+                    <li> <p class="lead">You can add many items as you want in your list.</p></li>
+                    <li> <p class="lead">Once your list completed you can use it to maintain your routine work.</p></li>
+                </ul>
+              </div>
+          <div class="col-md-5 order-md-1">
+           <img class=" image bd-placeholder-img bd-placeholder-img-lg instruct-img img-fluid mx-auto" src="images/worklist.jpg" alt="image">
+          </div>
+        </div>
+    
+        <hr>
+    
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="instruct-head">Third -  <span class="instruct-sub-head">Check Your List Items.</span></h2>
+                <ul>
+                    <li> <p class="lead">When you complete your task you can check these checkboxes in order to remember which task is completed and which one is remain to complete.</p></li>
+                    <li> <p class="lead">This helps you to complete your routine task or work on time as well as it boost you to complete more task.</p></li>
+                    <li> <p class="lead">If you find any problem regard this applicationyou can notify me.</p></li>
+                    <li> <p class="lead">Thank you for visiting this application.</p></li>
+                    <li> <p class="lead">Have a great day..</p></li>
+                </ul>
+              </div>
+          <div class="col-md-5">
+           <img class="image bd-placeholder-img bd-placeholder-img-lg instruct-img img-fluid mx-auto" src="images/checklist.jpg" alt="image">
+          </div>
+        </div>
+    
+        <hr>
+    
+      
+    
+      </div>
+
+  <%- include("partials/footer.ejs") %>
+</body>
+</html>

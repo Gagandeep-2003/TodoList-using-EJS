@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="work">
+    <h1>Work List</h1>
+</div>
+
+<div class="box">
+  <form action="/submit_work" method="post" class="items">
+    <input type="text" placeholder="New Items" id="items" name="itemListed">
+    <input type="submit" value="+" id="btn" name="button"> 
+  </form>
+</div>
+        
+<ul class="tasks">
+  <% for (let i = 0; i < locals.arrayList2.length; i++) { %>
+    <li>
+      <input type="checkbox" id="checkBox<%= i %>" class="task-checkbox">
+      <span><%= locals.arrayList2[i] %></span>
+    </li>
+  <% } %>
+</ul>
+
+<%- include("partials/footer.ejs") %> 
